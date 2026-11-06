@@ -1,6 +1,6 @@
 import cv2
 from pathlib import Path
-import utility
+from task1 import utility, research
 
 NAME = 'Horbatiuk Mykyta'
 ANGLE = 45
@@ -23,3 +23,6 @@ utility.show_images(
     [image, rotated_image, binary_image],
     ["Base image", "Rotated image", "Binary image"]
 )
+
+research.angle_research(image)
+research.threshold_research(image)
