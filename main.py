@@ -31,7 +31,7 @@ utility.show_images(
     ["Base image", "Rotated image", "Binary image"]
 )
 
-research.angle_research(image)
+research.angle_research(image, scale=.5)
 research.threshold_research(image)
 
 ##############

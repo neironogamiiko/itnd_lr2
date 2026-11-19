@@ -2,7 +2,9 @@ import cv2
 from . import utility
 
 
-def angle_research(image, angles=[0, 30, 45, 90, 180]):
+def angle_research(image,
+                   angles=[0, 30, 45, 90, 180],
+                   scale = 1.0):
     rotation_results = []
     height, width = image.shape[:2]
     center = (width // 2, height // 2)
@@ -11,7 +13,7 @@ def angle_research(image, angles=[0, 30, 45, 90, 180]):
         matrix = cv2.getRotationMatrix2D(
             center,
             angle,
-            1.0
+            scale
         )
 
         result = cv2.warpAffine(
